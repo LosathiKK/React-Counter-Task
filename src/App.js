@@ -10,28 +10,28 @@ function App() {
     changeVar1(var1-1)
   }
 
-  const handleReset = () => (
-    setCount(0)
-  )
+  function Reset () {
+    changeVar1(0)
+  }
 
-  const handleAdd5 = () => (
-    setCount(count +5)
-  )
-
-  const handleMini3 = () => (
-    setCount(count -3)
-  )
+  function Add () {
+    changeVar1(var1+5)
+  }
+ 
+  function Minimize () {
+    changeVar1(var1-3)
+  }
     
   return <div>
     <h1>{var1}</h1>
     <button onClick={decrease}>Reduce by one</button>
     <button onClick={increase}>Increase by one</button>
 
-    <button onClick={handleReset} className='btn btn-secondary mn-3'> Reset </button>
+    <button onClick={Reset}> Reset </button>
 
-    <button onClick={handleAdd5} className='btn btn-add mn-3'> Add+5 </button>
+    <button onClick={Add}> Add </button>
 
-    <button onClick={handleMini3} className='btn btn-mini mn-3'> Minimize-3 </button>
+    <button onClick={Minimize}> Minimize </button>
     </div>
 
 }
